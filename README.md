@@ -1,9 +1,12 @@
 # Engenharia-de-Prompt-e-Aplica-es-em-Ia
 missão 1 -
 1- crie um prompt simples
+
 2- compartilhe o resultado no README
 
+
 MEU PROMPT - oque seria o mundo sem a tecnologia?
+
 
 Um mundo sem tecnologia seria radicalmente diferente do que conhecemos hoje. Veja alguns pontos principais:
 

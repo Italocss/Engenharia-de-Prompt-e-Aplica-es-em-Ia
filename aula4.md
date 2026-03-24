@@ -1,5 +1,6 @@
 me ajude a escrever meu README
 
+
 Claro, Italo! Para eu te ajudar a escrever um README bem estruturado, preciso entender um pouco mais sobre o contexto. README pode variar bastante dependendo do objetivo. Por exemplo:
 
 Se é para um projeto de código (GitHub, GitLab), geralmente inclui: descrição, instalação, uso, exemplos, contribuição, licença.

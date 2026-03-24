@@ -87,6 +87,8 @@ Você gostaria que eu expandisse essa documentação para incluir também **boas
  Comparar a clareza e aplicabilidade das respostas:
 
  Clareza: A resposta foi direta e simples. foi organizada em 3 sessões como esperado, objetivo, descrissão e exemplo de uso.
+ 
+ 
  Aplicabilidade: Foi boa, com estrutura clara, Mas foi uma explicação pra quem já entende pelo menos um pouco de programação
 
  

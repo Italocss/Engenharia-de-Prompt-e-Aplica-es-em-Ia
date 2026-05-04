@@ -1,0 +1,180 @@
+Hoje
+
+
+Esse gráfico que você trouxe é bem interessante porque sintetiza de forma visual o que muita gente percebe na prática: a IA acelera tarefas mecânicas, mas não substitui o julgamento humano.
+
+✨ O que a imagem mostra bem:
+
+A máquina brilha em tarefas repetitivas, estruturais e de memória curta (como lembrar sintaxe ou formatar dados).
+
+O humano é indispensável quando entra em jogo o sentido: lógica de negócio, segurança, arquitetura, e principalmente os casos extremos que não seguem o padrão.
+
+Se pensarmos em termos de colaboração, é quase como uma dança: a IA dá o ritmo, mas quem escolhe os passos é você.
+
+💡 Uma reflexão que o gráfico inspira: talvez o maior valor da IA não seja “pensar por nós”, mas liberar nossa energia criativa e estratégica para onde realmente importa.
+
+Você gostaria que eu expandisse essa ideia em um texto mais analítico — por exemplo, um artigo curto sobre como dividir responsabilidades entre IA e humanos em projetos de software? Isso poderia transformar o gráfico em um argumento mais completo.
+
+faça um script python simples para verificar a temperatura de um sistema. se for maior que 30, exiba um alerta superaquecimento
+Aqui está um exemplo bem simples em Python para monitorar a temperatura de um sistema e emitir um alerta caso ultrapasse 30 °C:
+
+python
+# Script simples para verificar temperatura
+
+# Simulação de leitura da temperatura (poderia vir de um sensor real)
+temperatura = float(input("Digite a temperatura atual do sistema: "))
+
+if temperatura > 30:
+    print("ALERTA: Superaquecimento!")
+else:
+    print("Temperatura dentro do limite seguro.")
+Esse script pede que você insira a temperatura manualmente, mas em um cenário real a variável temperatura poderia ser alimentada por um sensor ou API.
+
+Quer que eu mostre também uma versão que simula leituras contínuas (como se fosse um monitor em tempo real)?
+
+
+
+Ótimo, a nova missão que você trouxe é sobre automação de arquivos — organizar pastas com base na extensão. Vou te mostrar um script Python simples que atende aos requisitos:
+
+python
+import os
+import shutil
+
+def organizar_arquivos(diretorio):
+    # Percorre todos os arquivos no diretório
+    for arquivo in os.listdir(diretorio):
+        caminho_arquivo = os.path.join(diretorio, arquivo)
+
+        # Ignora pastas, só trata arquivos
+        if os.path.isfile(caminho_arquivo):
+            # Pega a extensão do arquivo
+            extensao = arquivo.split('.')[-1]
+
+            # Cria a pasta da extensão, se não existir
+            pasta_destino = os.path.join(diretorio, extensao)
+            if not os.path.exists(pasta_destino):
+                os.makedirs(pasta_destino)
+
+            # Move o arquivo para a pasta correspondente
+            shutil.move(caminho_arquivo, os.path.join(pasta_destino, arquivo))
+
+# Exemplo de uso
+diretorio_alvo = input("Digite o caminho da pasta a organizar: ")
+organizar_arquivos(diretorio_alvo)
+print("Organização concluída com sucesso!")
+✅ O que esse script faz:
+
+Cria pastas automaticamente com o nome da extensão (ex: pdf, jpg).
+
+Move os arquivos para suas respectivas pastas.
+
+Garante que não dá erro se a pasta não existir (ele cria).
+
+Se você quiser, posso adaptar para que ele rode continuamente como um “vigia” da pasta, reorganizando sempre que novos arquivos aparecerem. Quer que eu mostre essa versão também?
+
+
+
+Perfeito, agora entramos na Missão 02: Consulta Simples a APIs. Vou te mostrar um script em Python que consulta a API pública do ViaCEP e trata erros de forma elegante:
+
+python
+import requests
+
+def consultar_cep(cep):
+    try:
+        # Faz a requisição à API ViaCEP
+        url = f"https://viacep.com.br/ws/{cep}/json/"
+        resposta = requests.get(url)
+        resposta.raise_for_status()  # dispara erro se status != 200
+
+        dados = resposta.json()
+
+        # Verifica se houve erro no retorno
+        if "erro" in dados:
+            print("CEP inválido. Tente novamente.")
+        else:
+            print(f"Endereço para CEP {cep}:")
+            print(f"Logradouro: {dados.get('logradouro')}")
+            print(f"Bairro: {dados.get('bairro')}")
+            print(f"Cidade: {dados.get('localidade')}")
+            print(f"Estado: {dados.get('uf')}")
+
+    except requests.exceptions.RequestException as e:
+        print("Erro de conexão ou requisição:", e)
+
+# Exemplo de uso
+cep_input = input("Digite o CEP (somente números): ")
+consultar_cep(cep_input)
+✅ O que esse script garante:
+
+Integração funcional com a API do ViaCEP.
+
+JSON formatado e exibido de forma clara.
+
+Tratamento de erros de conexão e CEP inválido sem quebrar o programa.
+
+Se quiser, posso te mostrar também como provocar um erro intencional na URL e depois corrigir com try/except, para simular o aprendizado sugerido na missão. Quer que eu monte esse exemplo de “erro + correção”?
+
+
+
+Chegamos à Missão 03: Sistema de Notificações 🚨.
+A ideia aqui é criar um programa modular que só dispara alertas quando uma condição crítica é atingida. Vou te mostrar uma versão simples em Python, já organizada em funções:
+
+python
+def verificar_temperatura(valor):
+    """Verifica se a temperatura é crítica."""
+    return valor > 30
+
+def emitir_alerta(mensagem):
+    """Dispara o alerta no console (poderia ser e-mail)."""
+    print(f"ALERTA: {mensagem}")
+
+def monitorar_sistema(temperatura):
+    """Função principal que coordena a lógica."""
+    if verificar_temperatura(temperatura):
+        emitir_alerta("Superaquecimento detectado!")
+    else:
+        print("Sistema dentro dos limites seguros.")
+
+# Exemplo de uso
+temp = float(input("Digite a temperatura atual: "))
+monitorar_sistema(temp)
+✅ O que esse código cumpre:
+
+Lógica condicional: só dispara alerta se a condição crítica for verdadeira.
+
+Modularização: funções separadas (verificar_temperatura, emitir_alerta, monitorar_sistema).
+
+Flexibilidade: fácil de refatorar ou trocar o tipo de alerta (console → e-mail, por exemplo).
+
+Se quiser, posso te mostrar uma versão refatorada ainda mais limpa, usando classes ou até simulando envio de e-mail. Quer que eu prepare essa versão final mais robusta?
+
+
+
+Agora chegamos ao Protocolo de Entrega (Output), que é como um pipeline final para consolidar tudo que você desenvolveu nas missões anteriores. Ele pede três entregáveis principais antes de subir no GitHub:
+
+📂 1. Código
+Os três scripts em Python funcionando perfeitamente:
+
+Missão 01: Automação de arquivos por extensão.
+
+Missão 02: Consulta à API ViaCEP com tratamento de erros.
+
+Missão 03: Sistema de notificações modular.
+
+📄 2. Documentação (ReadMe)
+Um exemplo em Markdown poderia ser:
+
+markdown
+# Projeto - Automação com IA
+
+Este repositório contém três scripts em Python desenvolvidos com apoio de IA (Copilot).  
+Os prompts ajudaram a estruturar funções, sugerir boas práticas e acelerar a escrita de código.  
+Cada missão representa um desafio prático: organização de arquivos, integração com API e sistema de notificações.
+🔎 3. Reflexão
+Aqui você pode escrever um parágrafo crítico sobre a experiência. Por exemplo:
+
+A colaboração humano-IA mostrou-se eficiente para acelerar tarefas repetitivas e sugerir soluções rápidas. No entanto, a intervenção humana foi essencial para validar a lógica, tratar casos extremos e garantir segurança. A IA funciona como um copiloto, mas a direção continua sendo responsabilidade do desenvolvedor.
+
+Com esses três elementos prontos, o próximo passo é subir tudo no repositório GitHub da disciplina.
+
+Quer que eu te ajude a montar o README completo já formatado em Markdown, incluindo instruções de uso dos scripts? Isso deixaria o pacote pronto para entrega.

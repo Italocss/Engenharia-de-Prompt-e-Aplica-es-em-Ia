@@ -4,7 +4,7 @@ Aqui está um exemplo de uma calculadora simples em Python que faz operações b
 python
 def calculadora():
     print("Selecione a operação:")
-    print("1 - Soma")
+    print("1 - Soma") 
     print("2 - Subtração")
     print("3 - Multiplicação")
     print("4 - Divisão")

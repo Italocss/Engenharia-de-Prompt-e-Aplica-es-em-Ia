@@ -1,0 +1,115 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Italocss/Engenharia-de-Prompt-e-Aplica-es-em-Ia/blob/main/Aula7\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "300cd916"
+      },
+      "source": [
+        "# Calculadora Simples em Python"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "47ecf641"
+      },
+      "source": [
+        "def adicionar(x, y):\n",
+        "    return x + y\n",
+        "\n",
+        "def subtrair(x, y):\n",
+        "    return x - y\n",
+        "\n",
+        "def multiplicar(x, y):\n",
+        "    return x * y\n",
+        "\n",
+        "def dividir(x, y):\n",
+        "    if y == 0:\n",
+        "        return \"Erro! Divisão por zero!\"\n",
+        "    return x / y\n"
+      ],
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "babb7a93"
+      },
+      "source": [
+        "## Demonstração da Calculadora"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ea44fcda",
+        "outputId": "36d95b89-2898-4ee7-e994-395987af7000"
+      },
+      "source": [
+        "num1 = 10\n",
+        "num2 = 5\n",
+        "\n",
+        "operacoes = {\n",
+        "    '+': adicionar,\n",
+        "    '-': subtrair,\n",
+        "    '*': multiplicar,\n",
+        "    '/': dividir\n",
+        "}\n",
+        "\n",
+        "for simbolo, funcao in operacoes.items():\n",
+        "    resultado = funcao(num1, num2)\n",
+        "    print(f\"{num1} {simbolo} {num2} = {resultado}\")\n",
+        "\n",
+        "print(\"\\n--- Teste de Divisão por Zero ---\")\n",
+        "num3 = 10\n",
+        "num4 = 0\n",
+        "print(f\"{num3} / {num4} = {dividir(num3, num4)}\")"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10 + 5 = 15\n",
+            "10 - 5 = 5\n",
+            "10 * 5 = 50\n",
+            "10 / 5 = 2.0\n",
+            "\n",
+            "--- Teste de Divisão por Zero ---\n",
+            "10 / 0 = Erro! Divisão por zero!\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Conheça o Colab",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}

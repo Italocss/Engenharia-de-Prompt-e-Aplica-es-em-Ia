@@ -1,3 +1,6 @@
+
+https://www.figma.com/make/5tkYVI1K3558cgINy17LtC/Integrate-AI-into-Project?p=f&t=ISUttkADigx2CPwv-0&preview-route=%2Fdashboard
+
 Documentação de Projeto: BRidge AI Disciplina: Engenharia de Prompt / Low Code / No Code / Vibecode
 
 Data: 25/05/2026

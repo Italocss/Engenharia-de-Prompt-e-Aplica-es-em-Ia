@@ -6,7 +6,7 @@ Data: 25/05/2026
 
 Professor(a): Kadidja Valéria
 
-Autor: Equipe de Desenvolvimento Sênior
+Autores: Italo, João, Osvaldo
 
 📌 Desafio Escolhido
 Otimização de Operações de Suporte via Triagem e Roteamento Automático de Chamados (BRidge AI)

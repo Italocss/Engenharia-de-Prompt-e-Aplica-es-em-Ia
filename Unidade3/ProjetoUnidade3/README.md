@@ -22,7 +22,11 @@ Otimização de Operações de Suporte via Triagem e Roteamento Automático de C
 
 
 🗂 Estrutura do Repositório
+
+
 📁 Pasta principal: Unidade3/ProjetoUnidade3
+
+
 Este é o diretório raiz do projeto. Dentro dele, você encontrará:
 
 README.md
@@ -35,6 +39,7 @@ Normalmente usado para explicar o propósito do projeto, instruções de instala
 
 📁 Subpasta: docs
 
+
 Contém materiais de apoio e documentação.
 
 Arquivos presentes:
@@ -45,6 +50,8 @@ Capturas de tela (Captura de tela 2026-05-25 ...) → Evidências visuais, exemp
 
 🚀 Sugestão de Navegação
 Comece pelo README.md
+
+
 
 Entenda o objetivo geral do projeto e instruções básicas.
 
